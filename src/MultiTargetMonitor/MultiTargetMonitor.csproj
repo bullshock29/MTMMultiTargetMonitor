@@ -16,6 +16,16 @@
     <Description>Create and edit .rdp files with per-monitor selection.</Description>
   </PropertyGroup>
 
+  <!-- Publish as one self-extracting .exe. `dotnet build` is unaffected; these only
+       take effect on `dotnet publish -r win-x64` (see tools/publish.ps1). -->
+  <PropertyGroup>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <DebugType>embedded</DebugType>
+    <SatelliteResourceLanguages>en-US</SatelliteResourceLanguages>
+  </PropertyGroup>
+
   <ItemGroup>
     <Resource Include="Assets\app.ico" />
     <Resource Include="Assets\app-256.png" />

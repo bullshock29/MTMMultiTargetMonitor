@@ -13,13 +13,27 @@ dotnet build -c Debug
 dotnet run --project src/MultiTargetMonitor
 ```
 
-Or publish a portable exe:
+Needs the .NET 9 SDK to build. A dev build produces a folder of loose files
+(`MultiTargetMonitor.exe` launcher + `.dll` + two `*.json`); all of them plus the .NET 9 Desktop
+Runtime are required to run it.
+
+## Publish (single .exe)
 
 ```
-dotnet publish src/MultiTargetMonitor -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true
+pwsh tools/publish.ps1                 # framework-dependent  -> dist/MultiTargetMonitor.exe  (~0.6 MB)
+pwsh tools/publish.ps1 -SelfContained  # standalone           -> dist/MultiTargetMonitor.exe  (~57 MB)
 ```
 
-Requires the .NET 9 Desktop Runtime.
+Both produce **one** self-contained `.exe` in `dist/` — icon and assets are compiled in, no loose
+files.
+
+| Flavour | Size | Target machine needs |
+| --- | --- | --- |
+| framework-dependent | ~0.6 MB | [.NET 9 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/9.0) installed |
+| self-contained | ~57 MB | nothing — any 64-bit Windows 10/11 |
+
+(The single-file settings live in the `.csproj` but only apply to `dotnet publish -r win-x64`;
+`dotnet build` is unaffected.)
 
 ## Using it
 

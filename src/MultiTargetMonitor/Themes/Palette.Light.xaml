@@ -1,0 +1,47 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Surfaces -->
+    <SolidColorBrush x:Key="WindowBackground" Color="#F1F3F5" />
+    <SolidColorBrush x:Key="SurfaceBackground" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="SurfaceAltBackground" Color="#F7F8FA" />
+    <SolidColorBrush x:Key="SunkenBackground" Color="#ECEEF1" />
+
+    <!-- Lines -->
+    <SolidColorBrush x:Key="DividerBrush" Color="#E3E6EA" />
+    <SolidColorBrush x:Key="StrongBorderBrush" Color="#CDD2D9" />
+
+    <!-- Text -->
+    <SolidColorBrush x:Key="PrimaryTextBrush" Color="#1B1F24" />
+    <SolidColorBrush x:Key="SecondaryTextBrush" Color="#5B6572" />
+    <SolidColorBrush x:Key="DisabledTextBrush" Color="#9AA2AD" />
+
+    <!-- Fields -->
+    <SolidColorBrush x:Key="FieldBackground" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="FieldBorderBrush" Color="#CDD2D9" />
+
+    <!-- Accent (teal / green) -->
+    <SolidColorBrush x:Key="AccentBrush" Color="#12A594" />
+    <SolidColorBrush x:Key="AccentHoverBrush" Color="#0E8C7D" />
+    <SolidColorBrush x:Key="AccentPressedBrush" Color="#0B7568" />
+    <SolidColorBrush x:Key="AccentForegroundBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="AccentSubtleBackground" Color="#2212A594" />
+
+    <!-- Control interaction -->
+    <SolidColorBrush x:Key="ControlHoverBackground" Color="#ECEEF1" />
+    <SolidColorBrush x:Key="ControlPressedBackground" Color="#E0E3E8" />
+
+    <!-- State -->
+    <SolidColorBrush x:Key="OkBrush" Color="#1A7F55" />
+    <SolidColorBrush x:Key="WarnBrush" Color="#96690A" />
+    <SolidColorBrush x:Key="ErrorBrush" Color="#C0392B" />
+
+    <!-- Monitor diagram -->
+    <SolidColorBrush x:Key="MonitorSelectedFill" Color="#12A594" />
+    <SolidColorBrush x:Key="MonitorSelectedBorder" Color="#0B7568" />
+    <SolidColorBrush x:Key="MonitorSelectedText" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="MonitorUnselectedFill" Color="#E6E9EE" />
+    <SolidColorBrush x:Key="MonitorUnselectedBorder" Color="#C2C8D1" />
+    <SolidColorBrush x:Key="MonitorUnselectedText" Color="#67707C" />
+
+</ResourceDictionary>

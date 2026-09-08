@@ -11,7 +11,7 @@
     <RootNamespace>MultiTargetMonitor</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <ApplicationIcon>Assets\app.ico</ApplicationIcon>
-    <Version>0.1.0</Version>
+    <Version>9.8.26.1</Version>
     <Product>Multi Target Monitor</Product>
     <Description>Create and edit .rdp files with per-monitor selection.</Description>
   </PropertyGroup>

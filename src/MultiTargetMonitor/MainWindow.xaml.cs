@@ -1,4 +1,5 @@
 using System.IO;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -201,8 +202,11 @@ public partial class MainWindow : Window
     private void About_Click(object sender, RoutedEventArgs e)
     {
         CloseMenus();
+
+        var version = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "";
+
         MessageBox.Show(this,
-            "MTM — Multi Target Monitor  0.1\n\n" +
+            $"MTM — Multi Target Monitor  {version}\n\n" +
             "Creates and edits .rdp files with per-monitor selection via the 'selectedmonitors' field.\n\n" +
             "Monitor ids come from EnumDisplayMonitors (0-based) and should match 'mstsc.exe /l'. " +
             "Run with --list-monitors from a console to print the mapping.",
